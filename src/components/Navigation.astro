@@ -1,0 +1,14 @@
+---
+import Nav_Item from "./Nav_Item.astro"
+import "../style/Navigation.css";
+
+const urls = [
+    { href: "/", text: "Home" },
+    { href: "/about", text: "About" },
+    { href: "/blog", text: "Blog" },
+    { href: "/contact", text: "Contact" },
+];
+---
+<div class="navigation">
+    <nav>{ urls.map((url) => ( <Nav_Item {...url} /> )) }</nav>
+</div>

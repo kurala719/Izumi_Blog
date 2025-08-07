@@ -1,0 +1,13 @@
+.nav_item {
+    display: inline-block;
+    background-color: cornflowerblue;
+    padding: 1rem 2rem;
+}
+.nav_item:hover {
+    background-color: darkblue;
+    color: white;
+}
+.nav_item a {
+    text-decoration: none;
+    color: inherit;
+}

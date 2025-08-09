@@ -1,0 +1,13 @@
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/84074877_p0-たとえ.jpg");
+    background-size: cover;
+    background-repeat:repeat-x;
+}

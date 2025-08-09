@@ -1,16 +1,8 @@
 ---
-import Navigation from "../components/Navigation.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Izumi_Blog</title>
-	</head>
-	<body>
-		<Navigation />
-	</body>
-</html>
+<BaseLayout>
+	<h1>Home Page</h1>
+	<h2>Welcome to Izumi_Blog</h2>
+	<p>This is the home page of the Izumi_Blog. Explore our content and enjoy your stay!</p>
+</BaseLayout>

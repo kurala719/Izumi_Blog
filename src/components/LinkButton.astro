@@ -1,0 +1,34 @@
+---
+const url = Astro.props;
+---
+
+<div class="link_button">
+    <a href={url.href}>{url.text}</a>
+</div>
+
+<style>
+    .link_button {
+        display: inline-block;
+        background-color: palevioletred;
+        border-radius: 10px;
+        border: 2px solid blueviolet;
+    }
+
+    .link_button:hover {
+        background-color: mediumvioletred;
+        color: white;
+    }
+
+    .nav_item a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1rem;
+        font-family: Arial, sans-serif;
+        height: 2rem;
+        width: 6rem;
+        color: black;
+        padding-top: 1rem;
+        margin: 0;
+    }
+</style>

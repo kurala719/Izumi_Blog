@@ -1,14 +1,29 @@
 ---
-import Nav_Item from "./Nav_Item.astro"
-import "../style/Navigation.css";
+import NavItem from "./NavItem.astro";
 
 const urls = [
     { href: "/", text: "Home" },
     { href: "/about", text: "About" },
-    { href: "/blog", text: "Blog" },
+    { href: "/posts", text: "Posts" },
     { href: "/contact", text: "Contact" },
 ];
 ---
+
 <div class="navigation">
-    <nav>{ urls.map((url) => ( <Nav_Item {...url} /> )) }</nav>
+    <nav>
+        { urls.map((url) => (
+            <NavItem {...url} />
+        )) }
+    </nav>
 </div>
+
+<style>
+    .navigation {
+        display: flex;
+        background-color:cornflowerblue;
+        height: 100%
+    }
+    .navigation nav {
+        font-size: 0;
+    }
+</style>

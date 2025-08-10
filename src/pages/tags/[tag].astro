@@ -23,7 +23,7 @@ const filteredPosts = posts.filter((post: any) => post.frontmatter.tags && post.
 ---
 
 <BaseLayout pageTitle={tag}>
-    <p>Posts tagged with {tag}</p>
+    <h1 style="text-align: center;">Tag: {tag}</h1>
     <ul>
         {
             filteredPosts.map((post: any) => (

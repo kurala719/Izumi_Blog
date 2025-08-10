@@ -27,7 +27,7 @@ const contacts = [
                 contacts.map((contact) => (
                     <tr>
                         <td>{contact.method}</td>
-                        <td>{contact.detail}</td>
+                        <td>{ contact.detail.includes("http") ? <a href={contact.detail}>{contact.detail}</a> : contact.detail }</td>
                         <td />
                     </tr>
                 ))

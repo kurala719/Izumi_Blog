@@ -10,7 +10,7 @@ const { posts } = Astro.props;
                 postUrl={post.url} 
                 postTitle={post.frontmatter.title} 
                 description={post.frontmatter.description ? post.frontmatter.description : "No Description Yet"}
-                postImg={post.frontmatter.image.url}
+                imgUrl={post.frontmatter.image.url}
             />
         ))
     }

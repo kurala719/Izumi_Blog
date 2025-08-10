@@ -1,0 +1,17 @@
+---
+import PostItem from './postItem/postItem.astro';
+
+const { posts } = Astro.props;
+---
+<div class="postDisplayer">
+    {
+        posts.map((post: any) => (
+            <PostItem
+                postUrl={post.url} 
+                postTitle={post.frontmatter.title} 
+                description={post.frontmatter.description ? post.frontmatter.description : "No Description Yet"}
+                postImg={post.frontmatter.image.url}
+            />
+        ))
+    }
+</div>

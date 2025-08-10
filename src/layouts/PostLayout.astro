@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import LinkButton from "../components/LinkButton.astro";
-import Preface from "../components/Preface.astro";
+import LinkButton from "../components/basic/LinkButton.astro";
+import Preface from "../components/basic/Preface.astro";
 
 const { frontmatter } = Astro.props;
 const backUrl = { href:"/posts", text:"Back to Posts" }
@@ -13,8 +13,8 @@ const backUrl = { href:"/posts", text:"Back to Posts" }
     <h1 class="postTitle">{ frontmatter.title }</h1>
     <Preface class="preface">
         { frontmatter.author ? <p>Written by { frontmatter.author }</p> : <p>Author not specified</p> }
-        { frontmatter.pubDate ? <p>{ frontmatter.pubDate.toString().slice(0,10 )}</p> : <p>No publication date</p>}
-        { frontmatter.description ? <p>{ frontmatter.description }</p> : <p>No description available</p> }
+        { frontmatter.pubDate ? <p>Published on { frontmatter.pubDate.toString().slice(0,10 )}</p> : <p>No publication date</p>}
+        { frontmatter.description ? <p>Description: { frontmatter.description }</p> : <p>No description available</p> }
     </Preface>
     <slot />
 </BaseLayout>

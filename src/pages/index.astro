@@ -3,9 +3,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import "../style/global_conf.css";
 
 const pageTitle = "Home Page";
+const pages= Object.values(import.meta.glob('./*', { eager: true }));
 ---
 <BaseLayout>
-	<h1>Home Page</h1>
+	<h1>Home</h1>
 	<h2>Welcome to Izumi_Blog</h2>
 	<p>This is the home page of the Izumi_Blog. Explore our content and enjoy your stay!</p>
 </BaseLayout>

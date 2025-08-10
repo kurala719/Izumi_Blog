@@ -1,6 +1,9 @@
 ---
 layout: ../../layouts/PostLayout.astro
 title: The trial operation of Izumi_Blog
+image:
+    url: 'https://docs.astro.build/assets/rose.webp'
+    alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["astro"]
 ---
 # The trial operation of Izumi_Blog

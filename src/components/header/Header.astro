@@ -1,8 +1,9 @@
 ---
-import Navigation from "../components/Navigation.astro"
+import Navigation from "./navigation/Navigation.astro";
+const { urls } = Astro.props;
 ---
 <div class="header">
-    <Navigation />
+    <Navigation urls={ urls } />
 </div>
 
 <style>

@@ -1,0 +1,22 @@
+---
+import NavItem from "./navItem/NavItem.astro";
+
+const { urls } = Astro.props;
+---
+
+<div class="navigation">
+    <nav>
+        {urls.map((url: any) => <NavItem url={url} />)}
+    </nav>
+</div>
+
+<style>
+    .navigation {
+        display: flex;
+        background-color: cornflowerblue;
+        height: 100%;
+    }
+    .navigation nav {
+        font-size: 0;
+    }
+</style>

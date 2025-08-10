@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TagMenu from "../components/TagMenu.astro";
+import PostDisplayer from "../components/postDisplayer/postDisplayer.astro";
+import "../style/global_conf.css";
+
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+const allTags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+
+const filteredPosts = allPosts;
+---
+<BaseLayout>
+    <TagMenu tags={ allTags } />
+    <PostDisplayer posts={filteredPosts} />
+</BaseLayout>

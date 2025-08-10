@@ -1,0 +1,51 @@
+---
+const { postUrl, postTitle, description, imgSrc } = Astro.props;
+---
+
+<div class="postItem">
+    <div class="textPart">
+        <a href={postUrl}>{postTitle}</a>
+        <p>{description}</p>
+    </div>
+    <div class="imagePart">
+        <img src="https://docs.astro.build/assets/rose.webp" />
+    </div>
+</div>
+
+<style>
+    .postItem {
+        display: block;
+        height: 5rem;
+        padding: 5px;
+        border-bottom: 1px solid gray;
+    }
+    .postItem .textPart {
+        display: inline-block;
+        vertical-align: top;
+        width: 90%;
+    }
+    .postItem .textPart a {
+        color: black;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+    .postItem .textPart a:hover {
+        color: blue;
+    }
+    .postItem .textPart p {
+        margin: 0;
+        font-size: 1rem;
+        color: grey;
+    }
+    .postItem .imagePart {
+        display: inline-block;
+        vertical-align: top;
+        height: inherit;
+        position: fixed;
+        width: 30%;
+    }
+    .postItem .imagePart img {
+        width: inherit;
+        height: inherit;
+    }
+</style>

@@ -1,10 +1,17 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import Content from "../components/Content.astro";
+import Header from "../components/header/Header.astro";
+import Footer from "../components/footer/Footer.astro";
+import Content from "../components/content/Content.astro";
 import "../style/global_conf.css"
 
 const tabTitle = "Izumi_Blog"
+const pageUrls = [
+	{ href: "/", text: "Home" },
+	{ href: "/about", text: "About" },
+	{ href: "/blog", text: "Blog" },
+	{ href: "/contact", text: "Contact" },
+	{ href: "/tags", text: "Tags" }
+];
 ---
 
 <html lang="en">
@@ -16,7 +23,7 @@ const tabTitle = "Izumi_Blog"
 		<title>{ tabTitle }</title>
 	</head>
 	<body>
-		<Header />
+		<Header urls={ pageUrls } />
 		<Content>
 			<slot />
 		</Content>

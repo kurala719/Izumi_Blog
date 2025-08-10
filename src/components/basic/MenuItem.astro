@@ -1,0 +1,30 @@
+---
+const { href, text } = Astro.props;
+const { fontsize } = Astro.props;
+---
+
+<div class="menuItem">
+    <a href={ href }>{ text }</a>
+</div>
+
+<style>
+    .menuItem {
+        display: inline-flex;
+        color: black;
+        margin: 0;
+        height: 100%;
+    }
+    .menuItem a {
+        display: flex;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-family: Arial, sans-serif;
+        min-width: 3rem;
+        height: inherit;
+        line-height: 100%;
+        color: inherit;
+        margin: 0;
+    }
+</style>

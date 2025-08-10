@@ -1,5 +1,5 @@
 ---
-const url = Astro.props;
+const { url } = Astro.props;
 ---
 
 <div class="nav_item">
@@ -10,13 +10,8 @@ const url = Astro.props;
     .nav_item {
         display: inline-block;
         color: black;
-        background-color: cornflowerblue;
         margin: 0;
         height: 100%;
-    }
-    .nav_item:hover {
-        color: white;
-        background-color: darkblue;
     }
     .nav_item a {
         display: flex;
@@ -30,5 +25,9 @@ const url = Astro.props;
         line-height: 100%;;
         color: inherit;
         margin: 0;
+    }
+    .nav_item a:hover{
+        background-color: darkblue;
+        color: white
     }
 </style>

@@ -1,17 +1,32 @@
 ---
 import LinkButton from "./LinkButton.astro";
+
+const url = {
+    href: "/contact",
+    text: "Contact"
+};
 ---
 <div class="footer">
-    <LinkButton href="/contact" text="Contact Me" />
+    <p>© 2025 Izumi_Blog. All rights reserved.</p>
+    <LinkButton url={url} />
 </div>
 
 <style>
     .footer{
+        /*
         position:absolute;
         bottom:0;
-        height:5%;
+        */
+        height: 5%;
         width: 100%;
-        background-color:gray;
-        
+        background-color: lightgray;
+        margin-top: 6px;
+    }
+    .footer p{
+        display: inline;
+    }
+    .footer LinkButton{
+        display: inline-block;
+        margin-right: 10px;
     }
 </style>

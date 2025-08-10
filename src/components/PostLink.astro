@@ -1,0 +1,40 @@
+---
+const { postUrl, postTitle, description, postImg } = Astro.props;
+---
+
+<div class="postLink">
+    <div class="textPart">
+        <a href={postUrl}>{postTitle}</a>
+        <p>{description}</p>
+    </div>
+    <div class="imagePart">
+        <img src={ postImg } />
+    </div>
+</div>
+
+<style>
+    .postLink {
+        display: block;
+        height: 5rem;
+        padding: 5px;
+        border-bottom: 1px solid gray;
+    }
+    .postLink .textPart {
+        display: inline-block;
+        width: 70%;
+        vertical-align: top;
+    }
+    .postLink .textPart a {
+        color: black;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+    .postLink .textPart a:hover {
+        color: blue;
+    }
+    .postLink p {
+        margin: 0;
+        font-size: 1rem;
+        color: grey;
+    }
+</style>

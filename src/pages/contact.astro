@@ -1,9 +1,56 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../style/global_conf.css";
+
+const contacts = [
+    { method: "Email", detail: "kurala719@gmail.com" },
+    { method: "GitHub", detail: "https://github.com/kurala719" },
+    { method: "CSDN", detail: "https://blog.csdn.net/kurala719" },
+];
 ---
+
 <BaseLayout>
     <h1>Contact Page</h1>
-    <p>This is the contact page of Izumi_Blog. If you have any questions or feedback, feel free to reach out!</p>
-    <p>You can contact us via email at <a href="mailto:contact@izumi_blog.com">contact@izumi_blog.com</a>.</p>
+    <p>
+        Here are some ways to reach me, feel free to get in touch!
+    </p>
+    <table class="contact-table">
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Detail</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {
+                contacts.map((contact) => (
+                    <tr>
+                        <td>{contact.method}</td>
+                        <td>{contact.detail}</td>
+                        <td />
+                    </tr>
+                ))
+            }
+        </tbody>
+    </table>
 </BaseLayout>
+
+<style>
+    .contact-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .contact-table th,
+    .contact-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .contact-table th {
+        background-color: #f2f2f2;
+    }
+</style>

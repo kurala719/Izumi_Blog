@@ -1,0 +1,15 @@
+---
+const { textContent } = Astro.props;
+---
+<div class="preface">
+    <slot />
+</div>
+
+<style>
+    .preface {
+        display: block;
+        min-height: 1rem;
+        border-top: 3px solid grey;
+        border-bottom: 3px solid grey;
+    }
+</style>

@@ -1,5 +1,5 @@
 ---
-const url = Astro.props;
+const { url } = Astro.props;
 ---
 
 <div class="link_button">
@@ -8,10 +8,10 @@ const url = Astro.props;
 
 <style>
     .link_button {
-        display: inline-block;
-        background-color: palevioletred;
+        display: inline-flex;
+        background-color: violet;
         border-radius: 10px;
-        border: 2px solid blueviolet;
+        border: 2px solid purple;
     }
 
     .link_button:hover {
@@ -19,16 +19,21 @@ const url = Astro.props;
         color: white;
     }
 
-    .nav_item a {
-        display: block;
+    .link_button a {
+        display: flex;
         text-decoration: none;
-        text-align: center;
-        font-size: 1rem;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
         font-family: Arial, sans-serif;
-        height: 2rem;
-        width: 6rem;
+        height: 1.5rem;
+        min-width: 4rem;
         color: black;
-        padding-top: 1rem;
         margin: 0;
+        padding: 2px;
+    }
+
+    .link_button a:hover {
+        color: white;
     }
 </style>

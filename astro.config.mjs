@@ -1,3 +1,4 @@
+/*
 // @ts-check
 import { defineConfig } from 'astro/config';
 
@@ -6,3 +7,10 @@ export default defineConfig({
     site: "https://kurala719.github.io",
     base: "Izumi_Blog",
 });
+*/
+import { defineConfig } from 'astro/config'
+
+export default defineConfig({
+  site: 'https://kurala719.github.io',
+  base: 'Izumi_Blog',
+})

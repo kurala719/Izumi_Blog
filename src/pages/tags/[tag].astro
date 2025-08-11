@@ -22,7 +22,7 @@ const { posts, allTags } = Astro.props;
 ---
 
 <BaseLayout pageTitle={ tag }>
-    <TagMenu all="/blog" tags = { allTags } />
+    <TagMenu all="/Izumi_Blog/blog" tags = { allTags } />
     <h1 style="text-align: center;">Tag: { tag }</h1>
     <PostDisplayer posts= { posts } />
 </BaseLayout>

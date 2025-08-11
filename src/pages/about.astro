@@ -1,8 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../style/global_conf.css";
----
 
+const contacts = [
+    { method: "Email", detail: "kurala719@gmail.com" },
+    { method: "GitHub", detail: "https://github.com/kurala719" },
+    { method: "CSDN", detail: "https://blog.csdn.net/kurala719" },
+];
+---
 <BaseLayout>
     <h1>About</h1>
     <h2>Izumi Blog</h2>
@@ -15,7 +20,43 @@ import "../style/global_conf.css";
     <p>
         This blog is built using Astro, a modern static site generator that allows for fast and efficient web development.
     </p>
-    <h2>
-        Izumi
-    </h2>
+    <table class="contact-table">
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Detail</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {
+                contacts.map((contact) => (
+                    <tr>
+                        <td>{contact.method}</td>
+                        <td>{ contact.detail.includes("http") ? <a href={contact.detail}>{contact.detail}</a> : contact.detail }</td>
+                        <td />
+                    </tr>
+                ))
+            }
+        </tbody>
+    </table>
 </BaseLayout>
+
+<style>
+    .contact-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .contact-table th,
+    .contact-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .contact-table th {
+        background-color: #f2f2f2;
+    }
+</style>

@@ -7,10 +7,10 @@ const { posts } = Astro.props;
     {
         posts.map((post: any) => (
             <PostItem
-                postUrl={post.url} 
-                postTitle={post.frontmatter.title} 
+                postUrl={post.url && post.url} 
+                postTitle={post.frontmatter.title && post.frontmatter.title} 
                 description={post.frontmatter.description ? post.frontmatter.description : "No Description Yet"}
-                imgUrl={post.frontmatter.image.url}
+                imgUrl={post.frontmatter.image && post.frontmatter.image.url && post.frontmatter.image.url}
             />
         ))
     }

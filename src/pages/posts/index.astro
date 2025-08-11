@@ -1,16 +1,14 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import PostLink from "../../components/basic/PostLink.astro";
-import Preface from "../../components/basic/Preface.astro";
 import "../../style/global_conf.css";
+import PostDisplayer from "../../components/postDisplayer/postDisplayer.astro";
 
 const allPosts = Object.values(import.meta.glob('./*.md', { eager: true }));
 const description = "Test for description";
 ---
 <BaseLayout>
     <h1>Posts</h1>
-    <Preface />
-    {allPosts.map((post: any) => <PostLink postUrl={post.url} postTitle={post.frontmatter.title} description={post.frontmatter.description ? post.frontmatter.description : "No Description Yet"}/>)}
+    <PostDisplayer posts={ allPosts } />
 </BaseLayout>
 
 <style>

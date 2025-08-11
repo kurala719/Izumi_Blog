@@ -24,11 +24,13 @@ const { href, text } = Astro.props;
         padding: 5px;
         height: 1rem;
         min-width: 3rem;
-        border-left: 1px solid black;
-        border-right: 1px solid black;
     }
     .tagItem a:hover{
         background-color: grey;
+        color: white;
+    }
+    .tagItem a:active{
+        background-color: black;
         color: white;
     }
 </style>

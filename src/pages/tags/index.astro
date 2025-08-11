@@ -1,20 +1,14 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import Tag from "../../components/basic/Tag.astro";
+import TagMenu from "../../components/tagMenu/TagMenu.astro";
+import PostDisplayer from "../../components/postDisplayer/postDisplayer.astro"
 import "../../style/global_conf.css";
 
 const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
 const tags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
-const definedTags = [
-    "original",
-    "reprint",
-    "programming",
-    "network",
-    ""
-]
 ---
 <BaseLayout>
-  <div>
-    {tags.map((tag) => (<Tag tag={tag} />))}
-  </div>
+  <TagMenu all="/blog" tags={ tags } />
+  <h1>All Posts</h1>
+  <PostDisplayer posts= { allPosts } />
 </BaseLayout>

@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/PostLayout.astro
-title: 'A Test for Multilanguage'
+title: 'A Test for Multilanguages'
 pubDate: 2025-8-12
 description: 'This is a test page just for trying to generate a page in a few different languages'
 author: 'Izumi'
